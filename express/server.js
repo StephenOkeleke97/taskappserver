@@ -78,6 +78,7 @@ app.use(bodyParser.json());
 
 app.use(cors(corsOptions));
 
+app.set("trust proxy", 1);
 app.use(
   session({
     name: SESS_NAME,
@@ -93,7 +94,6 @@ app.use(
       maxAge: SESS_LIFETIME,
       sameSite: "none",
       secure: true,
-      httpOnly: true
     },
   })
 );
