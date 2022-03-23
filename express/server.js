@@ -82,7 +82,6 @@ app.set("trust proxy", 1);
 app.use(
   session({
     name: SESS_NAME,
-    proxy: true,
     resave: false,
     saveUninitialized: false,
     secret: SESS_SECRET,
