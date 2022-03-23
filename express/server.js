@@ -116,7 +116,7 @@ app.post("/loggedin", (req, res) => {
   res.sendStatus(401);
 });
 
-app.post("/login",  (req, res) => {
+app.post("/login", redirectHome, (req, res) => {
   const { username, password } = req.body;
   if (username && password) {
     const user = findUser(username, password);
