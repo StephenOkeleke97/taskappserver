@@ -85,6 +85,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     secret: SESS_SECRET,
+    proxy: true,
     store: MongoStore.create({
       client,
       dbName: "chatDB",
