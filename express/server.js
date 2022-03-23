@@ -92,8 +92,8 @@ app.use(
     }),
     cookie: {
       maxAge: SESS_LIFETIME,
-      sameSite: "lax",
-      secure: false,
+      sameSite: "none",
+      secure: true,
     },
   })
 );
