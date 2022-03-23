@@ -21,6 +21,7 @@ var corsOptions = {
   },
   methods:["GET", "PUT", "POST", "DELETE"],
   allowedHeaders:["Origin", "X-Requested-With", "Content-Type", "Accept"],
+  credentials: true,
   // maxAge:-1
   };
 
