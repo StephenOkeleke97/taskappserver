@@ -94,7 +94,6 @@ app.use(
       maxAge: SESS_LIFETIME,
       sameSite: "none",
       secure: true,
-      domain: "taskappbysteveserver.herokuapp.com",
       httpOnly: true
     },
   })
