@@ -6,25 +6,11 @@ const MongoStore = require("connect-mongo");
 const bodyParser = require("body-parser");
 const { User } = require("./schema/schema");
 const cors = require("cors");
-// const corsOptions = {
-//   cors: true,
-//   origin: ["https://taskappbysteve.herokuapp.com", "http://localhost:3000"],
-//   credentials: true,
-// };
-
-var whitelist = ["https://taskappbysteve.herokuapp.com", "http://localhost:3000"];
-
-var corsOptions = {
-  origin: function(origin, callback){
-      var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
-      callback(null, originIsWhitelisted);
-  },
-  methods:["GET", "PUT", "POST", "DELETE"],
-  allowedHeaders:["Origin", "X-Requested-With", "Content-Type", "Accept"],
+const corsOptions = {
+  cors: true,
+  origin: ["https://taskappbysteve.herokuapp.com", "http://localhost:3000"],
   credentials: true,
-  // maxAge:-1
-  };
-
+};
 const app = express();
 
 const TWO_HOURS = 1000 * 60 * 60 * 2;
