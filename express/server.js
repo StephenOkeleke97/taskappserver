@@ -12,7 +12,7 @@ const corsOptions = {
   credentials: true,
 };
 const app = express();
-app.set('trust proxy', 1);
+
 const TWO_HOURS = 1000 * 60 * 60 * 2;
 
 const {
