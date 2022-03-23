@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const { User } = require("./schema/schema");
 const cors = require("cors");
 const corsOptions = {
-  cors: false,
+  cors: true,
   origin: ["https://taskappbysteve.herokuapp.com", "http://localhost:3000"],
   credentials: true,
 };
