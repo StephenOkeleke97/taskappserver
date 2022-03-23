@@ -8,7 +8,7 @@ const { User } = require("./schema/schema");
 const cors = require("cors");
 const corsOptions = {
   cors: true,
-  origin: "https://taskappbysteve.herokuapp.com",
+  origin: ["https://taskappbysteve.herokuapp.com", "http://localhost:3000"],
   credentials: true,
 };
 const app = express();
@@ -92,7 +92,7 @@ app.use(
     }),
     cookie: {
       maxAge: SESS_LIFETIME,
-      sameSite: true,
+      sameSite: false,
       secure: false,
     },
   })
