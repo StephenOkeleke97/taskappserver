@@ -8,7 +8,7 @@ const { User } = require("./schema/schema");
 const cors = require("cors");
 const corsOptions = {
   cors: true,
-  origin: "http://localhost:3000",
+  origin: "https://taskappbysteve.herokuapp.com/",
   credentials: true,
 };
 const app = express();
