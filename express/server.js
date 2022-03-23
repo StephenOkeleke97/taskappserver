@@ -92,7 +92,7 @@ app.use(
     }),
     cookie: {
       maxAge: SESS_LIFETIME,
-      sameSite: false,
+      sameSite: "none",
       secure: false,
     },
   })
