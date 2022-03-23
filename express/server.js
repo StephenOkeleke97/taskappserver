@@ -95,7 +95,6 @@ app.use(
       sameSite: "none",
       secure: true,
       domain: "taskappbysteveserver.herokuapp.com",
-      path: "/",
       httpOnly: true
     },
   })
